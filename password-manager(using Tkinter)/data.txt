@@ -1,0 +1,6 @@
+abc | sayantiju2014@gmail.com | 123
+xyz | sayantiju2014@gmail.com | 789
+nw_web | sayantiju2014@gmail.com | 900
+amazon | sayantiju2014@gmail.com | 678
+flipkart | sayantiju2014@gmail.com | flip
+ghgjj | sayantiju2014@gmail.com | hghg
