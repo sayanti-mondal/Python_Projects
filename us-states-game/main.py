@@ -35,13 +35,18 @@ while len(guessed_states) < 50: # game would run till 50 turns until we manually
     # game ending condition: before breaking from the loop creating a list of states user missed to guess
     # and converting it to a csv file
     if answer_state == 'Exit':
-        missing_states = []
-        for state in states_list:
-            if state not in guessed_states: # checking for each state in states_list if not present
-                missing_states.append(state) # in guessed list then append that state in missing state
+        #using list comprehension
+        missing_states = [state for state in states_list if state not in guessed_states]
+    #     missing_states = []
+    #     for state in states_list:
+    #         if state not in guessed_states: # checking for each state in states_list if not present
+    #             missing_states.append(state) # in guessed list then append that state in missing state
+
         new_data = pandas.DataFrame(missing_states) # converting the list into a dataframe
         new_data.to_csv("missed_states.csv") # converting the dataframe into a csv
         break # Exit from the game
+
+
 
     # if guess is present in states_list enter in below condition
     if answer_state in states_list:
